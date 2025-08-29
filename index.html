@@ -2,77 +2,101 @@
 <html lang="en">
 	<head>
 		  <meta charset="UTF-8">
-		    <title>Class Handouts Index</title>
+		    <title>Protected Class Handouts</title>
 		      <style>
     body {
 	          font-family: Arial, sans-serif;
 		        margin: 40px;
 			      background-color: #f0f8ff;
 			          }
-        h1 {
-		      color: #2c3e50;
+        #content {
+		      display: none;
 		          }
-	    h2 {
-		          color: #34495e;
-			      }
-	        ul {
-			      list-style-type: none;
-			            padding-left: 0;
+	    #login {
+		          text-align: center;
+			        margin-top: 100px;
+				    }
+	        input[type="password"] {
+			      padding: 10px;
+			            font-size: 16px;
 				        }
-		    li {
-			          margin: 8px 0;
-				      }
-		        a {
-				      text-decoration: none;
-				            color: #2980b9;
-					        }
-			    a:hover {
-				          text-decoration: underline;
-					      }
-			      </style>
+		    button {
+			          padding: 10px 20px;
+				        font-size: 16px;
+					      margin-left: 10px;
+					          }
+		        h1, h2 {
+				      color: #2c3e50;
+				          }
+			    ul {
+				          list-style-type: none;
+					        padding-left: 0;
+						    }
+			        li {
+					      margin: 8px 0;
+					          }
+				    a {
+					          text-decoration: none;
+						        color: #2980b9;
+							    }
+				        a:hover {
+						      text-decoration: underline;
+						          }
+					  </style>
 	</head>
 	<body>
-		  <h1>Class Handouts</h1>
 
-		    <h2>Algebra</h2>
-		      <ul>
-			          <li><a href="class/Lecture-1_Algebra_handout.html">Lecture 1: Algebra</a></li>
-				      <li><a href="class/Lecture-2_Algebra_handout.html">Lecture 2: Algebra</a></li>
-				          <li><a href="class/Lecture-3_Algebra_handout.html">Lecture 3: Algebra</a></li>
-					    </ul>
+		  <div id="login">
+			      <h1>Enter Password to Access Class Handouts</h1>
+			          <input type="password" id="password" placeholder="Password">
+				      <button onclick="checkPassword()">Submit</button>
+				          <p id="error" style="color: red;"></p>
+					    </div>
 
-					      <h2>Combinatorics</h2>
-					        <ul>
-							    <li><a href="class/Lecture-4_Combinatorial_handout.html">Lecture 4: Combinatorics</a></li>
-							        <li><a href="class/Lecture-5_Combinatorial_handout.html">Lecture 5: Combinatorics</a></li>
-								    <li><a href="class/Lecture-6_Combinatorial_handout.html">Lecture 6: Combinatorics</a></li>
-								        <li><a href="class/Lecture-7_Combinatorial_handout.html">Lecture 7: Combinatorics</a></li>
-									  </ul>
+					      <div id="content">
+						          <h1>Class Handouts</h1>
 
-									    <h2>Geometry</h2>
-									      <ul>
-										          <li><a href="class/Lecture-8_Geometry_handout.html">Lecture 8: Geometry</a></li>
-											      <li><a href="class/Lecture-9_Geometry_handout.html">Lecture 9: Geometry</a></li>
-											          <li><a href="class/Lecture-10_Geometry_handout.html">Lecture 10: Geometry</a></li>
-												    </ul>
+							      <h2>Algebra</h2>
+							          <ul>
+									        <li><a href="class/Lecture-1_Algebra_handout.html">Lecture 1: Algebra</a></li>
+										      <li><a href="class/Lecture-2_Algebra_handout.html">Lecture 2: Algebra</a></li>
+										            <li><a href="class/Lecture-3_Algebra_handout.html">Lecture 3: Algebra</a></li>
+											        </ul>
 
-												      <h2>Number Theory</h2>
+												    <h2>Combinatorics</h2>
 												        <ul>
-														    <li><a href="class/Lecture-11_Number-Theory_handout.html">Lecture 11: Number Theory</a></li>
-														        <li><a href="class/Lecture-12_Number-Theory_handout.html">Lecture 12: Number Theory</a></li>
-															  </ul>
-	<script>
-		    function checkPassword() {
-			          const input = document.getElementById("password").value;
-			          const error = document.getElementById("error");
-			          if (input === "12345") {
-					          document.getElementById("login").style.display = "none";
-					          document.getElementById("content").style.display = "block";
-					        } else {
-							        error.textContent = "Incorrect password. Please try again.";
-							      }
-			        }
-		      </script>
+														      <li><a href="class/Lecture-4_Combinatorial_handout.html">Lecture 4: Combinatorics</a></li>
+														            <li><a href="class/Lecture-5_Combinatorial_handout.html">Lecture 5: Combinatorics</a></li>
+															          <li><a href="class/Lecture-6_Combinatorial_handout.html">Lecture 6: Combinatorics</a></li>
+																        <li><a href="class/Lecture-7_Combinatorial_handout.html">Lecture 7: Combinatorics</a></li>
+																	    </ul>
+
+																	        <h2>Geometry</h2>
+																		    <ul>
+																			          <li><a href="class/Lecture-8_Geometry_handout.html">Lecture 8: Geometry</a></li>
+																				        <li><a href="class/Lecture-9_Geometry_handout.html">Lecture 9: Geometry</a></li>
+																					      <li><a href="class/Lecture-10_Geometry_handout.html">Lecture 10: Geometry</a></li>
+																					          </ul>
+
+																						      <h2>Number Theory</h2>
+																						          <ul>
+																								        <li><a href="class/Lecture-11_Number-Theory_handout.html">Lecture 11: Number Theory</a></li>
+																									      <li><a href="class/Lecture-12_Number-Theory_handout.html">Lecture 12: Number Theory</a></li>
+																									          </ul>
+																										    </div>
+
+																										      <script>
+																											          function checkPassword() {
+																													        const input = document.getElementById("password").value;
+																													        const error = document.getElementById("error");
+																													        if (input === "12345") {
+																															        document.getElementById("login").style.display = "none";
+																															        document.getElementById("content").style.display = "block";
+																															      } else {
+																																              error.textContent = "Incorrect password. Please try again.";
+																																            }
+																													      }
+																												    </script>
 
 	</body>
 </html>
